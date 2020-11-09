@@ -1,0 +1,15 @@
+<div class="topic-index-wrapper">
+  <div class="container">
+    <% @users.each do |user| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="topic-index-single">
+            <h2 class="topic-author">
+              <%= link_to user.name, user %>
+            </h2>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div> 

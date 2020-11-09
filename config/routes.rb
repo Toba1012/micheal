@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/index'
   get 'topics/new'
   get 'sessions/new'
   
@@ -16,6 +17,11 @@ Rails.application.routes.draw do
   get '/comments/:topic_id/new', to: 'comments#new', as: 'comments'
   post '/comments/:topic_id/create', to: 'comments#create', as: 'comments_create'
   
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :topics
+  resources :relationships, only: [:create, :destroy]
 end
