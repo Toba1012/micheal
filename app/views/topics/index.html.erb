@@ -18,8 +18,14 @@
                 <i class="fa fa-heart fa-2x" style="color:red;" aria-hidden="true"></i>
               <% end %>
             <% end %>
-            
             <%= topic.favorite_users.count %>
+            
+            <% if !topic.stamp_users.include?(current_user) %>
+              <%= link_to stamps_path(topic_id: topic.id), method: :post do %>
+                <%= image_tag 'icons/stamp.png', class: 'topic-index-icon' %>
+              <% end %>
+            <% end %>
+            
             <%= link_to comments_path(topic_id: topic.id) do %>
               <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
             <% end %>
