@@ -1,10 +1,14 @@
 <div class="content">
-  <a class="js-modal-open" href="">クリックでモーダルを表示</a>
+  <a class="js-modal-open" href="">
+    <%= image_tag 'icons/stamp.svg', class: 'topic-index-icon' %>
+  </a>
 </div>
 <div class="modal js-modal">
   <div class="modal-bg js-modal-close"></div>
   <div class="modal-content">
-    <p>ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+    <p>
+      <%= image_tag 'icons/stamp.svg', class: 'topic-index-icon' %>
+    </p>
     <a class="js-modal-close" href="">閉じる</a>
   </div><!--modal-inner-->
 </div><!--modal-->
