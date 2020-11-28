@@ -7,7 +7,9 @@
   <div class="modal-bg js-modal-close"></div>
   <div class="modal-content">
     <p>
-      <%= image_tag 'icons/stamp.svg', class: 'topic-index-icon' %>
+      <%= link_to stamps_path(topic_id: topic.id), method: :post do %>
+        <%= image_tag 'icons/stamp.svg', class: 'topic-index-icon' %>
+      <% end %>
     </p>
     <a class="js-modal-close" href="">閉じる</a>
   </div><!--modal-inner-->
