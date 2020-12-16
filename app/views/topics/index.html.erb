@@ -21,7 +21,7 @@
             <%= topic.favorite_users.count %>
             
             <% if !topic.stamp_users.include?(current_user) %>
-              <%= render 'modal', topic: @topic %>
+              <%= render 'stamps/modal', topic: @topic %>
             <% end %>
             
             <%= link_to comments_path(topic_id: topic.id) do %>
